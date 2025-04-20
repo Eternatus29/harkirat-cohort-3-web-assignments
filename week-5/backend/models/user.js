@@ -11,7 +11,11 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
         trim: true
-    }
+    },
+    todos: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Todo'
+    }]
 }, {
     collection: "users"
 });
