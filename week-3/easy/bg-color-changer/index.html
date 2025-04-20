@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <title>BG Color Changer</title>
+</head>
+
+<body>
+    <div id="color-panel">
+        <button id="red-btn" class="color-btn" onClick="changeColor('red')">Red</button>
+        <button id="yellow-btn" class="color-btn" onClick="changeColor('yellow')">Yellow</button>
+        <button id="green-btn" class="color-btn" onClick="changeColor('green')">Green</button>
+        <button id="blue-btn" class="color-btn" onClick="changeColor('blue')">Blue</button>
+        <button id="black-btn" class="color-btn" onClick="changeColor('black')">Black</button>
+        <button id="custom-btn" class="color-btn" onClick="changeColor(getCustomColor())">Custom</button>
+        <input id="custom-color-input" placeholder="enter color in hex code" />
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

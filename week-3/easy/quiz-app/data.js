@@ -31,5 +31,5 @@ export const quizData = [{
     "d": "none of the above",
     "correct": "b",
 },
-// you can add more quiz here
+    // you can add more quiz here
 ]

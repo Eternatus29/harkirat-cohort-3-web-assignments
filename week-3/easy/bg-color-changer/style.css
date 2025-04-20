@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    height: 100vh;
+}
+
+#color-panel {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    margin: 1rem 20rem;
+    padding: 1rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem grey;
+}
+
+.color-btn {
+    padding: 1rem 2rem;
+    border-radius: 0.3rem;
+    border: 3px solid black;
+    cursor: pointer;
+}
+
+#red-btn {
+    background-color: red;
+    color: white;
+}
+
+#yellow-btn {
+    background-color: yellow;
+}
+
+#green-btn {
+    background-color: green;
+    color: white;
+}
+
+#blue-btn {
+    background-color: blue;
+    color: white;
+}
+
+#black-btn {
+    background-color: black;
+    color: white;
+}
+
+#custom-btn {
+    background-color: brown;
+}

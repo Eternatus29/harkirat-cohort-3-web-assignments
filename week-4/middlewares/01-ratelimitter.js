@@ -14,14 +14,31 @@ const app = express();
 let numberOfRequestsForUser = {};
 setInterval(() => {
     numberOfRequestsForUser = {};
-}, 1000)
+}, 1000);
 
-app.get('/user', function(req, res) {
-  res.status(200).json({ name: 'john' });
+function greatMiddleware(req, res, next) {
+    let username = req.headers["user-id"];
+    if (numberOfRequestsForUser[username]) {
+        numberOfRequestsForUser[username]++;
+    } else {
+        numberOfRequestsForUser[username] = 1;
+    }
+
+    if (numberOfRequestsForUser[username] >= 5) {
+        res.status(404).send("Too many requests");
+        return;
+    }
+    next();
+}
+
+app.use(greatMiddleware);
+
+app.get('/user', function (req, res) {
+    res.status(200).json({ name: 'john' });
 });
 
-app.post('/user', function(req, res) {
-  res.status(200).json({ msg: 'created dummy user' });
+app.post('/user', function (req, res) {
+    res.status(200).json({ msg: 'created dummy user' });
 });
 
 module.exports = app;

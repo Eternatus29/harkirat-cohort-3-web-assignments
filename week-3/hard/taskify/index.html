@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do Application</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <div id="main-section">
+            <h1>Task Manager</h1>
+            <div id="main-container">
+                <div id="pending" class="todo-containers">
+                    <h2>Pending Tasks</h2>
+                    <button onclick="taskForm('pending')">Add New Task</button>
+                    <div id="pending-tasks"></div>
+                </div>
+                <div id="in-progress" class="todo-containers">
+                    <h2>In Progress Tasks</h2>
+                    <button onclick="taskForm('in-progress')">Add New Task</button>
+                    <div id="in-progress-tasks"></div>
+                </div>
+                <div id="under-review" class="todo-containers">
+                    <h2>Under Review Tasks</h2>
+                    <button onclick="taskForm('under-review')">Add New Task</button>
+                    <div id="under-review-tasks"></div>
+                </div>
+                <div id="finished" class="todo-containers">
+                    <h2>Finished Tasks</h2>
+                    <button onclick="taskForm('finished')">Add New Task</button>
+                    <div id="finished-tasks"></div>
+                </div>
+            </div>
+        </div>
+        <div id="new-task-form" class="invisible">
+            <input id="task-type" type="hidden" />
+            <div>
+                <label for="task-name">Enter Task Name</label>
+                <input id="task-name" />
+            </div>
+            <div>
+                <label for="task-description">Enter Task Description</label>
+                <textarea id="task-description"></textarea>
+            </div>
+            <div>
+                <label for="task-time">Enter Task Time</label>
+                <input id="task-time" type="time" />
+            </div>
+            <div>
+                <button type="submit" onclick="createTask()">Add Task</button>
+                <button onclick="taskForm()">Close</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
